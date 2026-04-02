@@ -23,7 +23,7 @@
           <a class="nav-link" href="add.php">Shto Detyre</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="indexx.php">Lista e Detyrav</a>
+          <a class="nav-link" href="lista_detyrav.php">Lista e Detyrav</a>
         </li>
       </ul>
     </div>

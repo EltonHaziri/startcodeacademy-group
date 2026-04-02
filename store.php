@@ -1,6 +1,6 @@
 <?php
 
-include('classes/Task.php');
+include_once('classes/Task.php');
 
 if($_SERVER['REQUEST_METHOD']=='POST') {
     $error_input=[];

@@ -1,7 +1,11 @@
 <?php
 
+<<<<<<< HEAD
 
 include('config/database.php');
+=======
+require_once('config/database.php');
+>>>>>>> 3ba7ed814f70c982fe9429178baad4e09e72a022
 
 class Detyrat extends Database { 
 
@@ -39,9 +43,19 @@ class Detyrat extends Database {
     }
 
     // Update detyren
+<<<<<<< HEAD
     public function editoDetyren($id, $emri_detyres, $data_fillimit, $data_mbarimit){
         $sql = "UPDATE detyra 
                 SET emri_detyres='$emri_detyres',data_fillimit='$data_fillimit', data_mbarimit='$data_mbarimit', WHERE id='$id'";
+=======
+    public function editoDetyren($id, $emri_detyres, $data_fillimit, $data_mbarimit, $statusi){
+        $sql = "UPDATE detyra
+                SET emri_detyres='$emri_detyres',
+                    data_fillimit='$data_fillimit',
+                    data_mbarimit='$data_mbarimit',
+                    statusi='$statusi'
+                WHERE id='$id'";
+>>>>>>> 3ba7ed814f70c982fe9429178baad4e09e72a022
 
         $result = $this->conn->query($sql);
 
