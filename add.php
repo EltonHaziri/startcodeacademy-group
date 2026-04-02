@@ -24,8 +24,8 @@ include('partials/header.php');
                   <div class="mb-3">
                     <select name="statusi" id="statusi" class="form-control" required>
                     <option value="">-- Zgjidh Statusin --</option>
-                    <option value="0">E Pa përfunduar</option>
-                    <option value="1">E Përfunduar</option>
+                    <option value="E Pa Perfunduar">E Pa përfunduar</option>
+                    <option value="E Përfunduar">E Përfunduar</option>
     </select>
                   </div>
                   <button class="btn btn-primary">Dergo</button>
