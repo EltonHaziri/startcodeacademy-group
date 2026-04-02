@@ -38,12 +38,12 @@ class Detyrat extends Database {
     }
 
     // Update detyren
-    public function editoDetyren($id, $emri_detyres, $data_fillimit, $data_mbarimit, $statusi){
+    public function editoDetyren($id, $emri_detyres, $data_fillimit, $data_mbarimit){
         $sql = "UPDATE detyra
                 SET emri_detyres='$emri_detyres',
                     data_fillimit='$data_fillimit',
                     data_mbarimit='$data_mbarimit',
-                    statusi='$statusi'
+                    
                 WHERE id='$id'";
 
         $result = $this->conn->query($sql);

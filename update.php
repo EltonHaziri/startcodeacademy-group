@@ -31,7 +31,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $error_input[] = "Ju lutemi plotesoni daten e mbarimit";
     }
 
-    // id
+    // id   
     $id = filter_var($_POST['detyra_id'], FILTER_SANITIZE_NUMBER_INT);
 
  
