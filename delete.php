@@ -1,6 +1,6 @@
 <?php
 
 include_once('classes/Task.php');
-$task=new Task();
+$detyra=new Detyrat();
 $id=$_GET['id'];
-$delete=$task->deleteDetyra($id);
+$delete=$detyra->deleteDetyra($id);
