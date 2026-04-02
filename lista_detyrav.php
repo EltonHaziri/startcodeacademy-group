@@ -33,8 +33,8 @@ $detyrat=$detyr->index();
                     <td><?php echo $dt['data_mbarimit'] ?></td>
                     <td><?php echo $dt['statusi'] ?></td>
                     <td><a href='' class="btn btn-info">View</a>
-                    <a href='' class="btn btn-warning">Edit</a>
-                    <a href='' class="btn btn-danger">Delete</a>
+                    <a href='edit.php?id=<?php echo $dt['id'] ?>' class="btn btn-warning">Edit</a>
+                    <a href='delete.php?id=<?php echo $dt['id'] ?>' class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
                 <?php } ?>

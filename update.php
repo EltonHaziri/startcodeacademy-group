@@ -1,5 +1,5 @@
 <?php
-include("classes/Task.php");
+include_once("classes/Task.php");
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -40,7 +40,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "<p>" . $err . "</p>";
         }
     } else {
-        $task = new Task();
+        $task = new Detyrat();
         $task->editoDetyren($id, $emri_detyres, $data_fillimit, $data_mbarimit);
     }
 
