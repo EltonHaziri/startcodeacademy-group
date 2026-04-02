@@ -19,8 +19,8 @@ if(isset($_POST['statusi']) && $_POST['statusi'] !== '') {
             echo "<p>" . $err . "</p>";
         }
     } else {
-        $task = new Task();
-        $task->editoStatusin($id, $statusi);
+        $detyra = new Detyrat();
+        $detyra->editoStatusin($id, $statusi);
     }
 
 }

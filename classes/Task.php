@@ -54,6 +54,21 @@ class Detyrat extends Database {
         }
     }
 
+    public function editoStatusin($id, $statusi){
+        $sql = "UPDATE detyra
+        SET
+            statusi='$statusi'
+        WHERE id='$id'";
+
+        $result = $this->conn->query($sql);
+
+        if($result){
+            header('Location: lista_detyrav.php');
+        } else {
+            echo "statusi nuk u editua";
+        }
+    }
+
     // Delete detyren
     public function deleteDetyra($id){
         $sql = "DELETE FROM detyra WHERE id='$id'";
