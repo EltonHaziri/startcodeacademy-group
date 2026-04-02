@@ -40,16 +40,15 @@ class Detyrat extends Database {
     // Update detyren
     public function editoDetyren($id, $emri_detyres, $data_fillimit, $data_mbarimit){
         $sql = "UPDATE detyra
-                SET emri_detyres='$emri_detyres',
-                    data_fillimit='$data_fillimit',
-                    data_mbarimit='$data_mbarimit',
-                    
-                WHERE id='$id'";
+        SET emri_detyres='$emri_detyres',
+            data_fillimit='$data_fillimit',
+            data_mbarimit='$data_mbarimit'
+        WHERE id='$id'";
 
         $result = $this->conn->query($sql);
 
         if($result){
-            header('Location: detyrat.php');
+            header('Location: lista_detyrav.php');
         } else {
             echo "Detyra nuk u editua";
         }
