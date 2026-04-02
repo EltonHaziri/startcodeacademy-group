@@ -1,8 +1,11 @@
 <?php
 
-if($_SERER['REQUEST-METHOD']=='POST') {
+include('classes/Task.php');
+
+if($_SERVER['REQUEST_METHOD']=='POST') {
+    $error_input=[];
     //emri
-if(isset($_POST['emri_detyres'])&&!empty($_POST['emri_detyres'])) {
+if (isset($_POST['emri_detyres'])&&!empty($_POST['emri_detyres'])) {
     $emri_detyres = htmlspecialchars(strip_tags(trim($_POST['emri_detyres']))); 
 
   }
@@ -34,5 +37,14 @@ if(isset($_POST['emri_detyres'])&&!empty($_POST['emri_detyres'])) {
     $error_input[] = "Ju lutemi te zgjidhni statusin";
    }
 
-   
+   if(count($error_input)>0) {
+    foreach($error_input as $err) {
+        echo"<p>".$err."</p>";
+    }
+ }
+
+ else {
+    $detyrat = new Detyrat();
+    $detyrat->ruajDetyren($emri_detyres, $data_fillimit, $data_mbarimit, $statusi);
+ }
 }
