@@ -1,6 +1,7 @@
 <?php
 
-include('../config/database.php');
+
+include('config/database.php');
 
 class Detyrat extends Database { 
 
@@ -25,7 +26,7 @@ class Detyrat extends Database {
 
     // Ruaj detyren
     public function ruajDetyren($emri_detyres, $data_fillimit, $data_mbarimit, $statusi) { 
-        $sql = "INSERT INTO detyrat(emri_detyres, data_fillimit, data_mbarimit, statusi) 
+        $sql = "INSERT INTO detyra(emri_detyres, data_fillimit, data_mbarimit, statusi) 
                 VALUES('$emri_detyres', '$data_fillimit', '$data_mbarimit', '$statusi')";
         
         $result = $this->conn->query($sql);
