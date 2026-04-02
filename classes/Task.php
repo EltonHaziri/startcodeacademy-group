@@ -7,7 +7,7 @@ class Detyrat extends Database {
 
     // Merr krejt detyrat
     public function index(){
-        $sql = "SELECT * FROM detyrat";
+        $sql = "SELECT * FROM detyra";
         $result = $this->conn->query($sql);
 
         if($result->num_rows > 0){
@@ -19,7 +19,7 @@ class Detyrat extends Database {
 
     // Gjej nje detyre sipas ID
     public function find($id){
-        $sql = "SELECT * FROM detyrat WHERE id='$id'";
+        $sql = "SELECT * FROM detyra WHERE id='$id'";
         $result = $this->conn->query($sql);
         return $result->fetch_assoc();
     }
@@ -39,18 +39,14 @@ class Detyrat extends Database {
     }
 
     // Update detyren
-    public function editoDetyren($id, $emri_detyres, $data_fillimit, $data_mbarimit, $statusi){
-        $sql = "UPDATE detyrat 
-                SET emri_detyres='$emri_detyres',
-                    data_fillimit='$data_fillimit',
-                    data_mbarimit='$data_mbarimit',
-                    statusi='$statusi'
-                WHERE id='$id'";
+    public function editoDetyren($id, $emri_detyres, $data_fillimit, $data_mbarimit){
+        $sql = "UPDATE detyra 
+                SET emri_detyres='$emri_detyres',data_fillimit='$data_fillimit', data_mbarimit='$data_mbarimit', WHERE id='$id'";
 
         $result = $this->conn->query($sql);
 
         if($result){
-            header('Location: detyrat.php');
+            header('Location: lista_detyrav.php');
         } else {
             echo "Detyra nuk u editua";
         }
@@ -58,7 +54,7 @@ class Detyrat extends Database {
 
     // Delete detyren
     public function deleteDetyra($id){
-        $sql = "DELETE FROM detyrat WHERE id='$id'";
+        $sql = "DELETE FROM detyra WHERE id='$id'";
         $result = $this->conn->query($sql);
 
         if($result){
